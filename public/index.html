@@ -109,6 +109,7 @@
             </div>
             <button
               class="flex-1 bg-slate-300 text-slate-500 rounded-xl text-xl py-2"
+              id="add-new-product"
             >
               Add New Product
             </button>
@@ -116,15 +117,7 @@
         </div>
         <!-- product list -->
         <h2 class="text-xl font-bold text-slate-300 mb-2">Product List</h2>
-        <div class="flex items-center justify-between">
-          <span class="text-slate-400">React.js</span>
-          <div class="flex items-center gap-3">
-            <span class="text-slate-400">date</span>
-            <span class="text-slate-400 border border-slate-400 px-3 py-0.5 rounded-2xl">frontend</span>
-            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500 text-slate-300 border-2 border-slate-400">7</span>
-            <button class="px-3 py-0.5 rounded-2xl border text-red-400 border-red-400">delete</button>
-          </div>
-        </div>
+        <div id="products-list"></div>
         <div class="h-20"></div>
       </div>
     </div>

@@ -47,8 +47,8 @@ export default class Storage {
       existedItem.category = productToSave.category;
     } else {
       // new
-      existedItem.id = new Date().getTime();
-      existedItem.createdAt = new Date().toISOString();
+      productToSave.id = new Date().getTime();
+      productToSave.createdAt = new Date().toISOString();
       savedProducts.push(productToSave);
     }
     localStorage.setItem("product", JSON.stringify(savedProducts));
