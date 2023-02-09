@@ -689,6 +689,9 @@ select {
 .flex {
   display: flex;
 }
+.hidden {
+  display: none;
+}
 .h-12 {
   height: 3rem;
 }
@@ -809,6 +812,9 @@ select {
 }
 .font-bold {
   font-weight: 700;
+}
+.font-medium {
+  font-weight: 500;
 }
 .text-slate-300 {
   --tw-text-opacity: 1;

@@ -3,10 +3,19 @@ import Storage from "./Storage.js";
 const categoryTitle = document.querySelector("#category-title");
 const categoryDescription = document.querySelector("#category-description");
 const addNewCategoryBtn = document.querySelector("#add-new-category");
+const categoryWrapper = document.querySelector("#category-wrapper");
+const toggleAddCategoryBtn = document.querySelector("#toggle-add-category");
+const cancelAddCategoryBtn = document.querySelector("#cancel-new-category");
 
 class CategoryView {
   constructor() {
     addNewCategoryBtn.addEventListener("click", (e) => this.addNewCategory(e));
+    toggleAddCategoryBtn.addEventListener("click", (e) =>
+      this.toggleAddCategory(e)
+    );
+    cancelAddCategoryBtn.addEventListener("click", (e) =>
+      this.cancelAddCategory(e)
+    );
     this.categories = [];
   }
 
@@ -33,6 +42,18 @@ class CategoryView {
       result += `<option value=${element.id} class="bg-slate-700">${element.title}</option>`;
     });
     document.getElementById("product-category").innerHTML = result;
+  }
+
+  toggleAddCategory(e) {
+    e.preventDefault();
+    categoryWrapper.classList.remove("hidden");
+    toggleAddCategoryBtn.classList.add("hidden");
+  }
+
+  cancelAddCategory(e) {
+    e.preventDefault();
+    categoryWrapper.classList.add("hidden");
+    toggleAddCategoryBtn.classList.remove("hidden");
   }
 }
 
