@@ -104,8 +104,7 @@
                 name="product-category"
                 id="product-category"
                 class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"
-              >
-              </select>
+              ></select>
             </div>
             <button
               class="flex-1 bg-slate-300 text-slate-500 rounded-xl text-xl py-2"
@@ -117,12 +116,19 @@
         </div>
         <!-- product list -->
         <h2 class="text-xl font-bold text-slate-300 mb-2">Product List</h2>
+        <div class="flex items-center justify-between mb-6">
+          <label for="search-input" class="text-slate-400">Search</label>
+          <input
+            type="text"
+            class="bg-transparent rounded-xl border border-slate-500 text-slate-400"
+            placeholder="Type something..."
+            id="search-input"
+          />
+        </div>
         <div id="products-list"></div>
         <div class="h-20"></div>
       </div>
     </div>
-
-
 
     <script src="../src/js/app.js" type="module"></script>
   </body>
